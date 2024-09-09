@@ -89,7 +89,8 @@
     display: flex;
     justify-content: space-between;
 }
-.logo i{
+.logo .logo-img{
+    width: 24px;
     margin-right: var(--space-sm);
     color: var(--main);
 }
@@ -188,7 +189,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-image: url('profile.jpg');
+    background-image: url('images/mem1.png');
     background-size: cover;
     background-position: center 40%;
 }
@@ -247,6 +248,9 @@
     font-size: 40px;
     margin-bottom: var(--space-big);
     font-weight: 700;
+}
+.header-logo{
+    width: 150px;
 }
 .home-phar{
     font-size: var(--font-big);

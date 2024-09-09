@@ -14,3 +14,50 @@ menuBtn.onclick = () => {
     menuBtn.classList.toggle('fa-times')
     side.classList.toggle('active')
 }
+
+const form = document.querySelector('#register-form')
+const card = document.querySelector('#register-card')
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+
+    // const email = document.querySelector('#email').value
+    // const password = document.querySelector('#password').value
+    // const confirmPassword = document.querySelector('#confirm-password').value
+    
+    // if (email === '' || password === '' || confirmPassword === '') {
+    //     alert('Please fill in all fields')
+    //     return
+    // }
+    
+    // if (password !== confirmPassword) {
+    //     alert('Passwords do not match')
+    //     return
+    // }
+    card.innerHTML = `
+
+    <div class="card-right">
+        
+        <div class="card-top">
+            <h1 class="card-header green">
+                Vasa prijava je predata<br>
+                molimo sačekajte dok vas proverimo dali ste podobni za nasu organizaciju 
+                <br> odgovor ćete dobiti putem imejla
+            </h1>
+        </div>
+    <div class="card-body mb-24">Odgovor očekujte u periodu od mesec do 6 meseci
+    </div>
+    <div class="card-footer">
+        <div class="footer-left red">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            Lorem, ipsum dolor sit amet
+        </div>
+        <div class="footer-message"><i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <div class="call"><i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+    </div>
+    `
+})
