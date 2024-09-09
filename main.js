@@ -17,6 +17,11 @@ menuBtn.onclick = () => {
 
 const form = document.querySelector('#register-form')
 const card = document.querySelector('#register-card')
+const inputs = document.querySelectorAll('.input')
+const ime = document.querySelector('#ime')
+const prezime = document.querySelector('#prezime')
+const email = document.querySelector('#email')
+const telefon = document.querySelector('#telefon')
 
 
 form.addEventListener('submit', (e) => {
@@ -36,8 +41,23 @@ form.addEventListener('submit', (e) => {
     //     alert('Passwords do not match')
     //     return
     // }
-    card.innerHTML = `
+    inputs.forEach(input => {
+        const errorPhar = input.parentNode.querySelector('.error')
+        if(input.value === ''){
+            input.classList.add('input-error')
+            errorPhar.classList.add('error-active')
+        }else{
+            input.classList.remove('input-error')
+            errorPhar.classList.remove('error-active')
 
+        }
+    })
+
+    if(ime.value !== '' && prezime.value !== '' && email.value !== '' && telefon.value !== ''){
+        console.log(ime.value, prezime.value, email.value, telefon.value)
+
+        card.innerHTML = `
+        
     <div class="card-right">
         
         <div class="card-top">
@@ -60,4 +80,5 @@ form.addEventListener('submit', (e) => {
         </div>
     </div>
     `
+}
 })
