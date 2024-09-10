@@ -248,6 +248,7 @@
     font-size: 40px;
     margin-bottom: var(--space-big);
     font-weight: 700;
+    color: var(--main);
 }
 .header-logo{
     width: 150px;
