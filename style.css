@@ -635,8 +635,23 @@ section, footer{
     .inter-cont{
         flex-direction: column;
     }
+    .team-cont{
+        flex-direction: column;
+        gap: 30vw;
+    }
+    .team-image{
+        top: 40%;
+        width: 60vw;
+    }
     .footer-cont{
         grid-template-columns: 1fr;
+        /* text-align: center ; */
+    }
+    .team-right{
+        padding-top: 80px;
+        padding-left: 10vw;
+        padding-bottom: 80px;
+        padding-right: 20vw;
     }
 }
 /* Medium devices (tablets, 768px and up) */
