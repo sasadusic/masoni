@@ -571,7 +571,7 @@ section, footer{
     }
     section, footer{
         position: relative;
-        width: max-content;
+        width: 100vw;
         margin-left: 0;
         padding: var(--space-big);
         padding-left: 60px;
