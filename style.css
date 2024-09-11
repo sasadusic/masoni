@@ -236,7 +236,7 @@
 }
 .home-left{
     position: relative;
-    height: calc(100vh - 105px);
+    min-height: calc(100vh - 105px);
     width: 40%;
     /* background: #000; */
     display: flex;
@@ -370,110 +370,7 @@
     padding-right: auto;
     flex: 1;
 }
-/* Extra large devices (large desktops, 1200px and up) */
-@media (width <= 1200px) {
-    .map{
-        width: 0;
-    }
-    #home{
-    width: calc(100vw - 240px);
-    margin-right: 0;
-    }
-    .home-down{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px 0;
-    }
-}
-/* Large devices (desktops, 992px and up) */
-@media (width <= 992px) {
-    .home-up{
-        flex-direction: column-reverse;
-    }
-    .home-left{
-        width: 100%;
-        /* height: calc(100vh - 105px); */
-        height: 110vh;
-        padding-left: 24px;
-    }
-    .home-right{
-        width: 100%;
-        height: calc(100vh - 105px);
-        height: 40vh;
-        padding: 0;
-    }
-    .right-img{
-        border-radius: 0;
-    }
-    .home-down{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #home-over{
-        position: absolute;
-        bottom: 0 !important;
-        right: 0;
-        left: 0;
-        /* height: calc(100vh - 105px); */
-        height: 50%;
-        width: 100%;
-        margin-left: auto;
-        background: linear-gradient(var(--main-trans-01), var(--main-trans-03));
-        background: transparent;
-        filter: blur(10px);
-    }
-    .home-down{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* Medium devices (tablets, 768px and up) */
-@media (width <= 768px) {
-    #side{
-        /* position: absolute; */
-        left: -200px;
-    }    
-    .nav-link{
-        width: 200px;
-    }
-    #logo .fa-bars{
-        display: block;
-        margin-right: 12px;
-        margin-left: auto;
-        padding: 0;
-    }
-    #home{
-        width: calc(100% - 40px);
-        margin-left: 40px;
-    }
-    #side.active{
-        left: 0;
-    }
-    #side.active .nav-link{
-        width: 240px;
-    }
-    #side.active .logo p{
-        margin-right: 0;
-    }
-    #side.active .logo .fa{
-        margin-right: 24px;
-    }
-    .home-down{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-
- /* Small devices (landscape phones, 576px and up) */
-@media (width <= 576px) {
-    .home-down{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .cont{
-        padding-left: 24px;
-        /* width: 100%;
-        align-items: center;
-        justify-content: center; */
-    }
-}
+/* Products */
 section, footer{
     position: relative;
     width: calc(100vw - 240px);
@@ -522,9 +419,12 @@ section, footer{
 }
 .prod-down{
     display: flex;
+    flex-direction: column;
+    
     width: 80%;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    gap: var(--space-sm);
     margin-top: 60px;
     margin-bottom: 80px;
 }
@@ -581,7 +481,7 @@ section, footer{
     font-size: var(--font-sm);
 }
 .inter-image{
-    width: 400px;
+    width: 300px;
 }
 .inter-col{
     display: flex;
@@ -595,6 +495,7 @@ section, footer{
 }
 .team-image{
     position: absolute;
+    width: 350px;
     top: 8%;
 }
 .team .btn{
@@ -654,4 +555,140 @@ section, footer{
 }
 .icon i{
     color: #fff;
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (width <= 1200px) {
+    .map{
+        width: 0;
+    }
+    #home{
+    width: calc(100vw - 240px);
+    margin-right: 0;
+    }
+    .home-down{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 0;
+    }
+    section, footer{
+        position: relative;
+        width: max-content;
+        margin-left: 0;
+        padding: var(--space-big);
+        padding-left: 60px;
+    }
+    .prod-cont{
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-mid);
+        width: 100%;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (width <= 992px) {
+    .home-up{
+        flex-direction: column-reverse;
+    }
+    .home-left{
+        width: 100%;
+        /* height: calc(100vh - 105px); */
+        height: max-content;
+        padding-left: 24px;
+        height: max-content;
+        padding: 40px;
+    }
+    .home-right{
+        width: 100%;
+        height: calc(100vh - 105px);
+        height: 40vh;
+        padding: 0;
+    }
+    .right-img{
+        border-radius: 0;
+    }
+    .home-down{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #home-over{
+        position: absolute;
+        bottom: 0 !important;
+        right: 0;
+        left: 0;
+        /* height: calc(100vh - 105px); */
+        height: 50%;
+        width: 100%;
+        margin-left: auto;
+        background: linear-gradient(var(--main-trans-01), var(--main-trans-03));
+        background: transparent;
+        filter: blur(10px);
+    }
+    .home-down{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-cont{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        gap: var(--space-mid);
+    }
+    .prod-cont{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .inter-cont{
+        flex-direction: column;
+    }
+    .footer-cont{
+        grid-template-columns: 1fr;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (width <= 768px) {
+    #side{
+        /* position: absolute; */
+        left: -200px;
+    }    
+    .nav-link{
+        width: 200px;
+    }
+    #logo .fa-bars{
+        display: block;
+        margin-right: 12px;
+        margin-left: auto;
+        padding: 0;
+    }
+    #home{
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+    #side.active{
+        left: 0;
+    }
+    #side.active .nav-link{
+        width: 240px;
+    }
+    #side.active .logo p{
+        margin-right: 0;
+    }
+    #side.active .logo .fa{
+        margin-right: 24px;
+    }
+    .home-down{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (width <= 576px) {
+    .home-left{
+        text-align: center;
+    }
+    .home-down{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cont{
+        padding-left: 24px;
+        /* width: 100%;
+        align-items: center;
+        justify-content: center; */
+    }
 }
