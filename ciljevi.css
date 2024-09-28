@@ -350,6 +350,16 @@
     #side.active .logo .fa{
         margin-right: 24px;
     }
+    .card{
+        flex-direction: column;
+    }
+    .card-img{
+        width: 100%;
+        border-bottom-left-radius: 0;
+    }
+    .card-right{
+        width: 100%;
+    }
 }
 /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
